@@ -22,7 +22,7 @@
 		},
 		"time": {
 			"name": "constant.numeric.time",
-			"match": "[0-9]{1,2}:[0-9]{2}( am| pm)?"	
+			"match": "[0-9]{1,2}:[0-9]{2}( am| pm| AM| PM)?"
 		},
 		"point": {
 			"name": "keyword.operator.point",

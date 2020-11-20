@@ -3,6 +3,10 @@
     "displayName": "Tracker Lang",
     "description": "Language support for why not tracker files",
     "version": "0.0.1",
+    "main": "src/extension",
+    "activationEvents": [
+        "onCommand:tracker-lang.insertTime"
+    ],
     "engines": {
         "vscode": "^1.51.0"
     },
@@ -10,16 +14,34 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "tracker",
-            "aliases": ["Tracker", "tracker"],
-            "extensions": [".trk"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "tracker",
-            "scopeName": "source.tracker",
-            "path": "./syntaxes/tracker.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "tracker",
+                "aliases": [
+                    "Tracker",
+                    "tracker"
+                ],
+                "extensions": [
+                    ".trk"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "tracker",
+                "scopeName": "source.tracker",
+                "path": "./syntaxes/tracker.tmLanguage.json"
+            }
+        ],
+        "commands": [
+            {
+                "command": "tracker-lang.insertTime",
+                "title": "Insert Time"
+            }
+        ]
+    },
+    "dependencies": {
+        "date-fns": "^2.16.1"
     }
 }
