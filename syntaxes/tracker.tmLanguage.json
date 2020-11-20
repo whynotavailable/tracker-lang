@@ -38,7 +38,7 @@
 		},
 		"time": {
 			"begin": "[0-9]{1,2}:[0-9]{2}( am| pm| AM| PM)?",
-			"end": "(([0-9]{1,2}:[0-9]{2}( am| pm| AM| PM)?)|\\b)$",
+			"end": "([0-9]{1,2}:[0-9]{2}( am| pm| AM| PM)?)?$",
 			"beginCaptures": {
 				"0": {
 					"name": "constant.numeric.time"
