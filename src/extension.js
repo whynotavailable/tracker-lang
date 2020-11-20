@@ -7,7 +7,12 @@ function activate(context) {
             let editor = window.activeTextEditor;
             if (editor) {
                 editor.edit(editBuilder => {
-                    editBuilder.insert(editor.selection.active, getCurrentTime())
+                    if (!editor.selection.isEmpty) {
+                        editBuilder.replace(editor.selection, getCurrentTime())
+                    }
+                    else {
+                        editBuilder.insert(editor.selection.active, getCurrentTime())
+                    }
                 })
             }
         })
