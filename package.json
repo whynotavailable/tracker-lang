@@ -1,0 +1,25 @@
+{
+    "name": "tracker-lang",
+    "displayName": "Tracker Lang",
+    "description": "Language support for why not tracker files",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.51.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "tracker",
+            "aliases": ["Tracker", "tracker"],
+            "extensions": [".trk"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "tracker",
+            "scopeName": "source.tracker",
+            "path": "./syntaxes/tracker.tmLanguage.json"
+        }]
+    }
+}

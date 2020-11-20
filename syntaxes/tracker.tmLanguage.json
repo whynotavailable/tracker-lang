@@ -1,0 +1,41 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Tracker",
+	"patterns": [
+		{
+			"include": "#time"
+		},
+		{
+			"include": "#point"
+		},
+		{
+			"include": "#tag"
+		},
+		{
+			"include": "#seperator"
+		}
+	],
+	"repository": {
+		"ampm": {
+			"name": "constant.character.ampm",
+			"match": " (am|pm)?"
+		},
+		"time": {
+			"name": "constant.numeric.time",
+			"match": "[0-9]{1,2}:[0-9]{2}( am| pm)?"	
+		},
+		"point": {
+			"name": "keyword.operator.point",
+			"match": "^>"
+		},
+		"tag": {
+			"name": "constant.language.tag",
+			"match": "#[a-z\\-]+"
+		},
+		"seperator": {
+			"name": "keyword.operator.seperator",
+			"match": "^---$"
+		}
+	},
+	"scopeName": "source.tracker"
+}
