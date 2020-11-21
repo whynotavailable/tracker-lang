@@ -20,13 +20,6 @@ function activate(context) {
 }
 
 function getCurrentTime() {
-    let date = new Date();
-
-    let ampm = 'am';
-    let hours = date.getHours();
-
-
-
     return format(new Date(), 'hh:mm aa');
 }
 
