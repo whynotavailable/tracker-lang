@@ -13,6 +13,12 @@
 		},
 		{
 			"include": "#seperator"
+		},
+		{
+			"include": "#todo"
+		},
+		{
+			"include": "#meta"
 		}
 	],
 	"repository": {
@@ -58,6 +64,36 @@
 		"timeSplitter": {
 			"match": "\\-",
 			"name": "keyword.operator.timeSplitter"
+		},
+		"todo": {
+			"begin": "TODO:",
+			"end": "$",
+			"beginCaptures": {
+				"0": {
+					"name": "constant.character.todo"
+				}
+			},
+			"patterns": [{
+				"include": "#by"
+			}]
+		},
+		"by": {
+			"begin": "by",
+			"end": "([0-9]{4}-[0-9]{2}-[0-9]{2})?$",
+			"beginCaptures": {
+				"0": {
+					"name": "keyword.operator.by"
+				}
+			},
+			"endCaptures": {
+				"0": {
+					"name": "constant.character.byDate"
+				}
+			}
+		},
+		"meta": {
+			"name": "constant.character.metaKey",
+			"match": "^:[a-z\\-]+:"
 		}
 	},
 	"scopeName": "source.tracker"
